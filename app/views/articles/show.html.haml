@@ -6,3 +6,6 @@
 
 %h3 
   =link_to("Back to Articles List", articles_path)
+
+%p
+  =link_to("kill me softly", article_path(@article), method: :delete, data: {confirm: "Seriously? Choose wisely."})
