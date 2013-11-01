@@ -4,7 +4,9 @@
 %p
   =@article.body
 
-%h3 
+=render partial: 'comments/form'
+
+%p 
   =link_to("Back to Articles List", articles_path)
 
 %p
@@ -12,4 +14,8 @@
 %br
 %p
   =link_to("kill me softly", article_path(@article), method: :delete, data: {confirm: "Seriously? Choose wisely."})
+
+%br
+%h3 Oh Shit. Comments. Raise Boom.
+=render partial: 'articles/comment', collection: @article.comments
 
