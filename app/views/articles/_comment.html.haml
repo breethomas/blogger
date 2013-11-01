@@ -4,3 +4,9 @@
     =comment.author_name
   %p.comment
     =comment.body
+
+  %h5 Posted 
+  =distance_of_time_in_words(comment.article.created_at, comment.created_at)
+  %p Ago
+
+
