@@ -6,6 +6,10 @@
   =link_to(tag.name, tag_path(tag))
 
 %p
+  -if @article.image.exists?
+    =image_tag @article.image.url(:medium)
+
+%p
   =@article.body
 
 =render partial: 'comments/form'
