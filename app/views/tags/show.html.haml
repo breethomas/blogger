@@ -1,0 +1,10 @@
+%h1 Articles Tagged with 
+=@tag.name
+
+%ul
+  -@tag.articles.each do |article|
+    %li=link_to(article.title, article_path(article))
+
+%h3=link_to("Terminate this Tag", tag_path(@tag), method: :delete, data: {confirm: "Are you sure? There is no going back."})
+
+
